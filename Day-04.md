@@ -131,13 +131,13 @@ Self-Signed Certificate: Used for encrypting communication; in production, certi
 SSLKEYR: Specifies the location of the key repository for the queue manager.
 
 SSLCIPH: Defines the cipher specification for SSL/TLS encryption; must match on both ends of the channel. 
-[https://www.ibm.com/support/pages/how-auto-start-and-stop-listener-mq-60-and-later/stub?utm_source=chatgpt.com]
+[https://www.ibm.com/support/pages/how-auto-start-and-stop-listener-mq-60-and-later/stub]
 
-[https://community.broadcom.com/discussion/lisaibmmqrecvmqmdreplytoqueuemanager-this-property-set-to-listener-queue-manager-instead-of-respond-queue-manager?utm_source=chatgpt.com]
+[https://community.broadcom.com/discussion/lisaibmmqrecvmqmdreplytoqueuemanager-this-property-set-to-listener-queue-manager-instead-of-respond-queue-manager?]
 
-[https://www.experts-exchange.com/questions/24396700/stop-start-mq-environment.html?utm_source=chatgpt.com]
+[https://www.experts-exchange.com/questions/24396700/stop-start-mq-environment.html?]
 
-[https://www.ibm.com/docs/en/ibm-mq/9.2.x?topic=types-listeners&utm_source=chatgpt.com]
+[https://www.ibm.com/docs/en/ibm-mq/9.2.x?topic=types-listeners&]
 
 
 ## 📚 Additional Resources
