@@ -1,6 +1,6 @@
 # 📘 Day 2 - IBM MQ Practice
 
-# 🗓️ Day 1: Setting Up Your First Queue Manager
+# 🗓️ Setting Up Your First Queue Manager
 🎯 Objective
 Establish a foundational IBM MQ environment by creating a queue manager, defining a local queue, and verifying message operations.​
 
