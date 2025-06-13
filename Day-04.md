@@ -1,6 +1,6 @@
 # 📘 Day 4 - IBM MQ Practice
+# Implementing TLS Encryption for Secure Channel Communication
 
-## 🎯 Objective
 Enhance the security of your IBM MQ environment by configuring Transport Layer Security (TLS) to encrypt communication between two queue managers (QM1 and QM2).
 
 ## 🛠️ Prerequisites
