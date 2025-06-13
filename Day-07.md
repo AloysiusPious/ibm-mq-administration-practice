@@ -110,8 +110,8 @@ Always review the Reason Code in the DLH before reprocessing messages.
 Full list: [IBM MQ Reason Codes](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=reference-mq-reason-codes)
 
 ### 📚 References
-(IBM MQ — Dead Letter Queue Concepts)[https://www.ibm.com/docs/en/ibm-mq/9.3?topic=queues-dead-letter]
+[IBM MQ — Dead Letter Queue Concepts](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=queues-dead-letter)
 
-(runmqdlq Utility)[https://www.ibm.com/docs/en/ibm-mq/9.3?topic=utilities-runmqdlq-dead-letter-queue-handler]
+[runmqdlq Utility](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=utilities-runmqdlq-dead-letter-queue-handler)
 
 
