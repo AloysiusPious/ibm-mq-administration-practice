@@ -18,11 +18,9 @@ Learn how to configure MQ Triggering so that when a message arrives on a queue, 
 | PROCESS object | Defines the program to be triggered |
 | Trigger Type | FIRST, EVERY, or DEPTH — defines how frequently to trigger |
 
-🛠️ Step-by-Step Practice
-✅ 1. Define the Application Queue
-bash
-Copy
-Edit
+## 🛠️ Step-by-Step Practice
+### ✅ 1. Define the Application Queue
+```bash
 runmqsc QM1
 DEFINE QLOCAL('TRIGGER.TEST.Q') +
        TRIGGER +
@@ -32,29 +30,27 @@ DEFINE QLOCAL('TRIGGER.TEST.Q') +
        TRIGDATA('TRIGGER.PROC') +
        INITQ('SYSTEM.DEFAULT.INITIATION.QUEUE')
 END
+```
 ✅ 2. Define the PROCESS Object
-bash
-Copy
-Edit
+```bash
 DEFINE PROCESS('TRIGGER.PROC') +
        DESCR('Trigger test process') +
        APPLTYPE(UNIX) +
        APPLICID('/opt/mqm/samp/bin/amqsget TRIGGER.TEST.Q QM1')
 END
+```
 🔍 This will execute amqsget when the queue gets a message and is eligible to be triggered.
 
-✅ 3. Start the Trigger Monitor
-bash
-Copy
-Edit
+### ✅ 3. Start the Trigger Monitor
+```bash
 strmqtrm -m QM1 -q SYSTEM.DEFAULT.INITIATION.QUEUE
+```
 📌 This must run in the background or as a system service.
 
-✅ 4. Send a Message to the Queue
-bash
-Copy
-Edit
+### ✅ 4. Send a Message to the Queue
+```bash
 echo "Hello Trigger" | /opt/mqm/samp/bin/amqsput TRIGGER.TEST.Q QM1
+```
 Expected behavior:
 
 Trigger monitor notices a message on TRIGGER.TEST.Q
@@ -65,44 +61,41 @@ MQ uses TRIGDATA to match to the PROCESS
 
 It starts amqsget and receives the message
 
-🔎 5. Confirm Output
+### 🔎 5. Confirm Output
 The message should be printed to the terminal where amqsget runs (might require redirecting logs if run as service).
 
 🧹 Clean-Up
-bash
-Copy
-Edit
+```bash
 runmqsc QM1
 DELETE QLOCAL('TRIGGER.TEST.Q')
 DELETE PROCESS('TRIGGER.PROC')
 END
+```
 Stop trigger monitor:
 
-bash
-Copy
-Edit
+```bash
 # Find PID
 ps -ef | grep strmqtrm
-
+```
 # Kill it
+```bash
 kill <PID>
-🔄 Optional Variations
+```
+### 🔄 Optional Variations
 TRIGTYPE(EVERY): Triggers on every message
 
 TRIGTYPE(DEPTH): Triggers when queue depth reaches TRIGDPTH
 
 Example:
-
-bash
-Copy
-Edit
+```bash
 ALTER QLOCAL('TRIGGER.TEST.Q') TRIGTYPE(DEPTH) TRIGDPTH(5)
-📚 References
+```
+### 📚 References
 IBM Docs — Triggering Concepts
 
 IBM Docs — Trigger Monitor
 
-💡 Tips
+### 💡 Tips
 Use custom scripts or services in the APPLICID of the PROCESS object.
 
 Always test TRIGTYPE(FIRST) first to understand the behavior.
