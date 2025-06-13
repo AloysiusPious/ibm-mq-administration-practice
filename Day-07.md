@@ -114,7 +114,7 @@ Only certain types of failures result in automatic DLQ behavior:
 |-------------|--------------------|
 |Queue does not exist	|✅ Yes|
 |Queue is full (MQRC_Q_FULL)	|❌ No (app must handle)|
-|Queue is PUT(DISABLED)	|❌ No|
+|Queue is PUT(DISABLED)	|✅  Yes, if Only messages arriving via channels|
 |Message is too large (MQRC_MSG_TOO_BIG)	|✅ Yes|
 |Expired messages	|✅ Yes (with expiry report)|
 |No matching subscriber	|✅ Yes (if applicable)|
