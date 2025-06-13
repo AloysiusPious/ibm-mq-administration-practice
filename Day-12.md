@@ -1,0 +1,3 @@
+# 📘 Day 12 - IBM MQ Practice
+
+Content for Day 12 goes here...

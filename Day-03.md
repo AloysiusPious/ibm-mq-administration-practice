@@ -1,0 +1,3 @@
+# 📘 Day 3 - IBM MQ Practice
+
+Content for Day 3 goes here...
