@@ -91,14 +91,11 @@ Example:
 ALTER QLOCAL('TRIGGER.TEST.Q') TRIGTYPE(DEPTH) TRIGDPTH(5)
 ```
 ### 📚 References
-IBM Docs — Triggering Concepts
-
-IBM Docs — Trigger Monitor
+[IBM Docs — Triggering Concepts](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=triggering)
+[IBM Docs — Trigger Monitor](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=monitors-trigger-monitor)
 
 ### 💡 Tips
 Use custom scripts or services in the APPLICID of the PROCESS object.
-
 Always test TRIGTYPE(FIRST) first to understand the behavior.
-
 Ensure INITQ is correct and the monitor is started.
 
