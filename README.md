@@ -12,7 +12,7 @@ Welcome to the **IBM MQ 14-Day Practice Series** — a curated, progressive guid
 | Day | Topic |
 |-----|-------|
 | [Day 1](Day-01.md) | Install MQ, create QM, queues |
-| [Day 2](Day-02.md) | create QM, queues, Start/stop QMs, listeners, MQ Explorer |
+| [Day 2](Day-02.md) | create QM, queues, Start/stop QMs|
 | [Day 3](Day-03.md) | listeners, MQ Explorer |
 | [Day 4](Day-04.md) | TLS Encryption for Secure Channel Communication |
 | [Day 5](Day-05.md) | App-user security & MCAUSER, CHLAUTH rules |
