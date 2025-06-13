@@ -4,18 +4,19 @@
 ### 🎯 Objective
 Learn how to configure MQ Triggering so that when a message arrives on a queue, MQ automatically starts a program (trigger monitor launches it).
 
-This is useful for:
+### This is useful for:
 * Event-driven processing
 * Batch jobs
 * Reducing idle process overhead
 
-📚 Key Concepts
-Term	Description
-Triggering	MQ feature to auto-start an application when a condition on a queue is met
-Trigger Monitor	System process that listens to queues and launches target programs
-INITQ	The initiation queue used by the trigger monitor
-PROCESS object	Defines the program to be triggered
-Trigger Type	FIRST, EVERY, or DEPTH — defines how frequently to trigger
+### 📚 Key Concepts
+| Term	| Description|
+| -----| -----------|
+| Triggering	| MQ feature to auto-start an application when a condition on a queue is met |
+| Trigger Monitor | System process that listens to queues and launches target programs |
+| INITQ | The initiation queue used by the trigger monitor |
+| PROCESS object | Defines the program to be triggered |
+| Trigger Type | FIRST, EVERY, or DEPTH — defines how frequently to trigger |
 
 🛠️ Step-by-Step Practice
 ✅ 1. Define the Application Queue
