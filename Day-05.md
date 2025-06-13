@@ -1,6 +1,6 @@
 # 📘 Day 5 - IBM MQ Practice
 
-##Implementing Channel Authentication and User Authorization
+## Implementing Channel Authentication and User Authorization
 ## 🎯 Objective
 Enhance the security of your IBM MQ environment by configuring channel authentication (CHLAUTH) rules and setting appropriate user authorizations.
 
