@@ -107,6 +107,18 @@ Always review the Reason Code in the DLH before reprocessing messages.
 |2053	|MQRC_Q_FULL|
 |2058	|MQRC_Q_MGR_NAME_ERROR|
 
+✅ What Scenarios Automatically Put to DLQ?
+Only certain types of failures result in automatic DLQ behavior:
+
+|Failure Type	|Message Goes to DLQ?|
+|-------------|--------------------|
+|Queue does not exist	|✅ Yes|
+|Queue is full (MQRC_Q_FULL)	|❌ No (app must handle)|
+|Queue is PUT(DISABLED)	|✅ Yes|
+|Message is too large (MQRC_MSG_TOO_BIG)	|✅ Yes|
+|Expired messages	|✅ Yes (with expiry report)|
+|No matching subscriber	|✅ Yes (if applicable)|
+
 Full list: [IBM MQ Reason Codes](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=reference-mq-reason-codes)
 
 ### 📚 References
