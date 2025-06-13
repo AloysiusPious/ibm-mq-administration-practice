@@ -12,54 +12,54 @@ This guide walks through the steps required to install the IBM MQ Trial version 
 
 ---
 
-### 🚀 Installation Steps
+## 🚀 Installation Steps
 
 
-# 1. Move the downloaded MQ tarball to /opt/softwares
+### 1. Move the downloaded MQ tarball to /opt/softwares
 ```bash
 mv 9.4.0.10-IBM-MQTRIAL-LinuxX64.tar.gz /opt/softwares/
 ```
-# 2. Navigate to /opt/softwares and extract the archive
+### 2. Navigate to /opt/softwares and extract the archive
 ```bash
 cd /opt/softwares/
 tar -xzvf 9.4.0.10-IBM-MQTRIAL-LinuxX64.tar.gz
 ```
-# 3. List extracted files and verify current directory
+### 3. List extracted files and verify current directory
 ```bash
 ls -ltr
 pwd
 ```
-# 4. Navigate into the MQ Server directory
+### 4. Navigate into the MQ Server directory
 ```bash
 cd MQServer/
 ls -ltr
 ```
-# 5. Accept IBM MQ License
+### 5. Accept IBM MQ License
 ```bash
 sudo ./mqlicense.sh
 ```
-# 6. Create an MQ RPM package build directory
+### 6. Create an MQ RPM package build directory
 ```bash
 sudo ./crtmqpkg mq94 /opt/mqm
 ```
-# 7. Install required packages to build RPMs
+### 7. Install required packages to build RPMs
 ```bash
 sudo yum install -y rpmbuild
 sudo yum install -y rpm-build
 ```
-# 8. Re-run the package creation script (after installing build tools)
+### 8. Re-run the package creation script (after installing build tools)
 ```bash
 sudo ./crtmqpkg mq94 /opt/mqm
 ```
-# 9. Navigate to the generated RPM packages directory
+### 9. Navigate to the generated RPM packages directory
 ```bash
 cd /var/tmp/mq_rpms/mq94/x86_64
 ```
-# 10. Install all MQ RPM packages
+### 10. Install all MQ RPM packages
 ```bash
 sudo rpm -ivh *
 ```
-# 11. Verify IBM MQ version
+### 11. Verify IBM MQ version
 ✅ Verification Output Example
 ```bash
 dspmqver
