@@ -107,7 +107,7 @@ Always review the Reason Code in the DLH before reprocessing messages.
 |2053	|MQRC_Q_FULL|
 |2058	|MQRC_Q_MGR_NAME_ERROR|
 
-Full list: (IBM MQ Reason Codes)[https://www.ibm.com/docs/en/ibm-mq/9.3?topic=reference-mq-reason-codes]
+Full list: [IBM MQ Reason Codes](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=reference-mq-reason-codes)
 
 ### 📚 References
 (IBM MQ — Dead Letter Queue Concepts)[https://www.ibm.com/docs/en/ibm-mq/9.3?topic=queues-dead-letter]
