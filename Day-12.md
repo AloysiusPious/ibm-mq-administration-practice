@@ -144,7 +144,8 @@ To remove a queue manager from cluster:
 ```bash
 RESET CLUSTER(ALPHA) QMTYPE(QMGR) QMNAME(QMGR03)
 ```
-📚 References
+### 📚 References
+
 [IBM MQ Clusters Overview](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=clusters-clustering-overview)
 
 [Cluster Queue Manager Connections](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=clusters-configuring-queue-manager-be-part)
