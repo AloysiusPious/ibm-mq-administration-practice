@@ -3,14 +3,14 @@ This guide demonstrates topic-based Publish/Subscribe (Pub/Sub) in IBM MQ using 
 
 ### 🧠 What is Pub/Sub in MQ?
 Publish/Subscribe is a decoupled messaging model:
-``` bash
+
 |Role	|Description|
-------|-----------|
-|Publisher|	Sends messages to a topic (not to a queue)|
+|------|-----------|
+|Publisher |	Sends messages to a topic (not to a queue)|
 |Subscriber	|Subscribes to the topic and receives a copy of the message|
 |Topic |	Logical channel (e.g., /SPORTS/TENNIS) for routing messages|
--------|-------------------------------------------------------------|
-```
+|-------|-------------------------------------------------------------|
+
 All subscribers receive a copy of the published message if they match the topic.
 
 ### 🏗️ Architecture Overview
