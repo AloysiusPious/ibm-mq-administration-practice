@@ -72,13 +72,14 @@ amqsget Q10 PUBSUBQMGR_ALOY
 Each queue (Q1 to Q10) will contain a copy of the published message.
 
 ### 🔁 Behavior Demonstration
-``` bash
-Subscriber	Queue	Result After amqspub
-SUB1	Q1	1 message received
-SUB2	Q2	1 message received
-...	...	...
-SUB10	Q10	1 message received
-```
+
+|Subscriber	|Queue	|Result After amqspub|
+|----------|--------|--------------------|
+|SUB1	|Q1	|1 message received|
+|SUB2	|Q2	|1 message received|
+|...	|...	|...|
+|SUB10	|Q10	|1 message received|
+
 ✅ You successfully implemented 1-to-many fan-out delivery.
 
 ### 🧠 Notes
