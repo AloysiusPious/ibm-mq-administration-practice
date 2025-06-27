@@ -92,9 +92,6 @@ MQ handles routing automatically.
 
 Connection Example:
 ```bash
-makefile
-Copy
-Edit
 QMGR: QMGR02
 CHANNEL: APP.SVRCONN
 CONNAME: QMGR02_IP(1420)
