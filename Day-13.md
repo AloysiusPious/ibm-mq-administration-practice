@@ -9,15 +9,16 @@ Difference between DEFBind(FIXED) vs DEFBind(NOTFIXED)
 Real message routing & HA simulation in cluster ALPHA
 
 ### 🏗️ Cluster Setup Overview
-```bash
-QMGR	Type	Port	Role in Cluster
-QMGR01	FR	1419	Cluster Member & Queue Host
-QMGR02	FR	1420	Cluster Member & Queue Host
-QMGR03	PR	1421	Cluster Member & Queue Host
-QMGR04	PR	1422	Cluster Member & Queue Host
-QMGR05	PR	1423	Cluster Member & Queue Host
-QMGR06	PR	1424	Cluster Member & Queue Host
-```
+
+|QMGR	|Type	|Port	|Role in Cluster|
+|------|-----|----|---------------|
+|QMGR01	|FR	|1419	|Cluster Member & Queue Host|
+|QMGR02	|FR	|1420	|Cluster Member & Queue Host|
+|QMGR03	|PR	|1421	|Cluster Member & Queue Host|
+|QMGR04	|PR	|1422	|Cluster Member & Queue Host|
+|QMGR05	|PR	|1423	|Cluster Member & Queue Host|
+|QMGR06	|PR	1|424	|Cluster Member & Queue Host|
+
 ### 🧪 Cluster Queue QMGR01.LQ is Shared Across All QMGRs
 You defined the same cluster queue on all 6 QMGRs:
 
@@ -48,13 +49,14 @@ echo "alter ql(QMGR01.LQ) defbind(notfixed)" | runmqsc QMGR06
 ### 🔁 What Happens Now?
 If an app sends 6 messages to QMGR01.LQ using any QMGR (e.g., via QMGR02), the messages are automatically spread across all 6 instances:
 
-Message #	Queue Manager Selected
-1	QMGR01
-2	QMGR03
-3	QMGR05
-4	QMGR02
-5	QMGR04
-6	QMGR06
+|Message #	|Queue Manager Selected|
+|-----------|-----------------------|
+|1	|QMGR01|
+|2	|QMGR03|
+|3	|QMGR05|
+|4	|QMGR02|
+|5	|QMGR04|
+|6	|QMGR06|
 
 ### ✅ MQ decides routing dynamically using cluster metadata.
 
@@ -74,10 +76,11 @@ echo "dis ql(QMGR01.LQ) curdepth" | runmqsc QMGR06
 ✅ You should see messages distributed across all QMs, not just one.
 
 ### 🚨 Common Misconfigs to Avoid
-Issue	Explanation
-Messages go only to one QM	Likely DEFBind(FIXED) or CLWLUSEQ(QMGR) is used
-CLUSRCVR channel has wrong CONNAME	MQ cannot route messages correctly
-No cluster queue defined on a QMGR	It won't receive messages even if it’s in the cluster
+|Issue	|Explanation|
+|--------|----------|
+|Messages go only to one QM	|Likely DEFBind(FIXED) or CLWLUSEQ(QMGR) is used|
+|CLUSRCVR channel has wrong CONNAME	|MQ cannot route messages correctly|
+|No cluster queue defined on a QMGR	|It won't receive messages even if it’s in the cluster|
 
 ### 🔐 Application Connection Strategy
 To use this load-balanced setup:
