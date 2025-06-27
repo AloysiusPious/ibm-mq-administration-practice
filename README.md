@@ -18,15 +18,14 @@ Welcome to the **IBM MQ 14-Day Practice Series** — a curated, progressive guid
 | [Day 5](Day-05.md) | App-user security & MCAUSER, CHLAUTH rules |
 | [Day 6](Day-06.md) | Triggering on queues |
 | [Day 7](Day-07.md) | DLQ (Dead Letter Queue) setup |
-
-| [Day 7](Day-07.md) | Channels, SVRCONN, amqputc/amqgetc |
-| [Day 8](Day-08.md) | Message browsing & destructive gets |
-| [Day 9](Day-09.md) | Queue depth monitoring, CURDEPTH |
-| [Day 12](Day-12.md) | Queue aliases & remote queues |
-| [Day 13](Day-13.md) | Cluster basics |
-| [Day 14](Day-14.md) | Pub/Sub basics |
-| [Day 15](Day-15.md) | Persistent vs Non-persistent |
-| [Day 16](Day-16.md) | Message Expiry (TTL) |
+| [Day 8](Day-08.md) | Channels, SVRCONN, amqputc/amqgetc |
+| [Day 9](Day-09.md) | Message browsing & destructive gets |
+| [Day 10](Day-10.md) | Queue depth monitoring, CURDEPTH |
+| [Day 11](Day-11.md) | Queue aliases & remote queues |
+| [Day 12](Day-12.md) | Cluster basics |
+| [Day 13](Day-13.md) | Pub/Sub basics |
+| [Day 14](Day-14.md) | Persistent vs Non-persistent |
+| [Day 15](Day-15.md) | Message Expiry (TTL) |
 
 ---
 
