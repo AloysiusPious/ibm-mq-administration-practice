@@ -9,7 +9,8 @@ Publish/Subscribe is a decoupled messaging model:
 |Publisher|	Sends messages to a topic (not to a queue)|
 |Subscriber	|Subscribes to the topic and receives a copy of the message|
 |Topic |	Logical channel (e.g., /SPORTS/TENNIS) for routing messages|
-
+-------|-------------------------------------------------------------|
+```
 All subscribers receive a copy of the published message if they match the topic.
 
 ### 🏗️ Architecture Overview
