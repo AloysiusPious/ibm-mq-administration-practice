@@ -1,6 +1,4 @@
-# 📘 Day 13 - IBM MQ Practice
-
-## 📘 IBM MQ Cluster Load Balancing & HA Setup
+# 📘 Day 13 - IBM MQ Cluster Load Balancing & HA Setup
 This guide explains how to configure High Availability + Load Balancing using CLWLUSEQ(ANY) and DEFBind(NOTFIXED) for a shared cluster queue (QMGR01.LQ) across six queue managers.
 
 ### 🧠 What You’ll Learn
