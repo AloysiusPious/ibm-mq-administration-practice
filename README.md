@@ -23,9 +23,10 @@ Welcome to the **IBM MQ 14-Day Practice Series** — a curated, progressive guid
 | [Day 10](Day-10.md) | Queue depth monitoring, CURDEPTH |
 | [Day 11](Day-11.md) | Queue aliases & remote queues |
 | [Day 12](Day-12.md) | Cluster basics |
-| [Day 13](Day-13.md) | Pub/Sub basics |
-| [Day 14](Day-14.md) | Persistent vs Non-persistent |
-| [Day 15](Day-15.md) | Message Expiry (TTL) |
+| [Day 13](Day-13.md) | Cluster Load Balancing & HA Setup |
+| [Day 14](Day-14.md) | Pub/Sub basics |
+| [Day 15](Day-15.md) | Persistent vs Non-persistent |
+| [Day 16](Day-16.md) | Message Expiry (TTL) |
 
 ---
 
