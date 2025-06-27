@@ -9,7 +9,6 @@ Publish/Subscribe is a decoupled messaging model:
 |Publisher |	Sends messages to a topic (not to a queue)|
 |Subscriber	|Subscribes to the topic and receives a copy of the message|
 |Topic |	Logical channel (e.g., /SPORTS/TENNIS) for routing messages|
-|-------|-------------------------------------------------------------|
 
 All subscribers receive a copy of the published message if they match the topic.
 
@@ -101,6 +100,6 @@ DELETE TOPIC(SPORTS)
 ```
 ### 📚 References
 
-IBM MQ Pub/Sub Concepts
+[IBM MQ Pub/Sub Concepts](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=pubsub-publishsubscribe)
 
-amqspub Tool Usage
+[amqspub Tool Usage](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=pubsub-publishsubscribe)
