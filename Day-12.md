@@ -22,8 +22,8 @@ Route messages without manually defining transmission queues or remote queues
 
 Provide load balancing and high availability
 
-🏗️ Cluster Topology Overview
-
+🏗Cluster Topology Overview
+```bash
              CLUSTER: ALPHA
         ┌─────────────────────┐
         │                     │
@@ -48,6 +48,7 @@ Provide load balancing and high availability
         ▼                   ▼
   QMGR05 (PR)         QMGR06 (PR)
   Port: 1423          Port: 1424
+ ```
 FR = Full Repository: Stores complete cluster data.
 
 PR = Partial Repository: Connects to cluster using FR.
