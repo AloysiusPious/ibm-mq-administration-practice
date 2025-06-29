@@ -2,17 +2,17 @@
 ## 🔹 1. What is a Namelist in IBM MQ?
 A Namelist is a list of names grouped together under one name. It can include:
 
-Queue names
+.Queue names
 
-Topic names
+.Topic names
 
 Queue manager clusters
 
 In cluster context, Namelists are used for:
 
-CLUSNL() → Control which clusters a queue is advertised in
+. CLUSNL() → Control which clusters a queue is advertised in
 
-REPOSNL() → Control which clusters a queue manager participates in
+. REPOSNL() → Control which clusters a queue manager participates in
 
 ## 🔹 2. Real-Time Use Case for Namelist
 In large environments, a queue manager may be part of multiple clusters (like ALPHA, BETA, GAMA). But not all queues need to be shared in all clusters.
@@ -128,6 +128,6 @@ QMGR REPOSNL	ALTER QMGR REPOSNL(IBMALOY)
 Multiple Clusters	ALPHA, BETA, GAMA
 
 ### 📚 References
-[IBM MQ Cluster Namelist Doc[(https://www.ibm.com/docs/en/ibm-mq/9.3?topic=clusters-cluster-namelist)
+[IBM MQ Cluster Namelist Doc](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=clusters-cluster-namelist)
 
 [Using CLUSNL & REPOSNL](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=clusters-configuring-cluster)
