@@ -2,9 +2,9 @@
 ## 🔹 1. What is a Namelist in IBM MQ?
 A Namelist is a list of names grouped together under one name. It can include:
 
-.Queue names
+. Queue names
 
-.Topic names
+. Topic names
 
 Queue manager clusters
 
@@ -19,15 +19,15 @@ In large environments, a queue manager may be part of multiple clusters (like AL
 
 So you:
 
-Group the cluster names into a Namelist
+. Group the cluster names into a Namelist
 
-Attach this list to queues (CLUSNL) or queue managers (REPOSNL)
+. Attach this list to queues (CLUSNL) or queue managers (REPOSNL)
 
 This gives fine-grained control:
 
-Who can see and put to a queue
+. Who can see and put to a queue
 
-What cluster visibility each queue has
+. What cluster visibility each queue has
 
 ## 🔹 3. Practical Setup Using Your Example
 ### 🏗️ Cluster Setup Summary
@@ -86,20 +86,20 @@ START LISTENER(LSN.QMGR3)
 ```
 ### 🔄 4. How Does It Work?
 ✅ Queue Visibility Based on CLUSNL
-CLUSNL(IBMALOY) is attached to Q1, Q2, Q3
+. CLUSNL(IBMALOY) is attached to Q1, Q2, Q3
 
-IBMALOY contains ALPHA, BETA, GAMA
+. IBMALOY contains ALPHA, BETA, GAMA
 
 So, these queues are advertised to all 3 clusters
 
 ✅ Any queue manager in ALPHA, BETA, or GAMA can see and send messages to Q1–Q3
 
 ✅ Queue Manager Routing Based on REPOSNL
-REPOSNL(IBMALOY) is set on QMGR2
+. REPOSNL(IBMALOY) is set on QMGR2
 
-QMGR2 becomes a gateway for all clusters in the namelist
+. QMGR2 becomes a gateway for all clusters in the namelist
 
-Any app connected to QMGR2 can access queues in ALPHA, BETA, GAMA
+. Any app connected to QMGR2 can access queues in ALPHA, BETA, GAMA
 
 ### 📦 Message Flow Scenarios
 |From	|To (Queue)	|Allowed?	|Reason|
