@@ -28,6 +28,7 @@ Welcome to the **IBM MQ 14-Day Practice Series** — a curated, progressive guid
 | [Day 15](Day-15.md) | Pub/Sub basics |
 | [Day 16](Day-16.md) | Persistent vs Non-persistent |
 | [Day 17](Day-17.md) | Message Expiry (TTL) |
+| [Day 18](Day-18.md) | Backup & Restore of Entire Queue Manager Configuration |
 
 ---
 
