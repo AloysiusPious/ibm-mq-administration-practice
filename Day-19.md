@@ -125,7 +125,7 @@ Trace files can be very large; enable only when troubleshooting.
 ## ✅ Summary Table
 |Log Type	|Location	|Purpose	|Notes|
 |--------|----------|---------|-----|
-|QMGR Error Logs	|/var/mqm/qmgrs/<QMGR>/errors/	Q|MGR lifecycle and error info	|Use tail -f to monitor live|
+|QMGR Error Logs	|/var/mqm/qmgrs/<QMGR>/errors/	|QMGR lifecycle and error info	|Use tail -f to monitor live|
 |Global MQ Errors	|/var/mqm/errors/	|System-wide MQ errors	|Includes installation-wide issues|
 |Channel Trace Logs	|var/mqm/trace/	|Deep diagnostics for channels	|Binary files, decode required|
 |Listener Logs	|In QMGR error logs	|Listener start/stop, errors	|No separate log file by default|
