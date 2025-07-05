@@ -86,8 +86,9 @@ This channel sends messages from QMGR1 to QMGR2.
 ```bash
 
 DEFINE CHANNEL(TO.QMGR2) CHLTYPE(SDR) CONNAME('QMGR2_IP(1415)') XMITQ(QMGR2) TRPTYPE(TCP)
-Replace QMGR2_IP with the actual hostname or IP of QMGR2.
 ```
+Replace QMGR2_IP with the actual hostname or IP of QMGR2.
+
 Port should match QMGR2's listener.
 
 #### ✅ Define Alias Queue (Optional)
