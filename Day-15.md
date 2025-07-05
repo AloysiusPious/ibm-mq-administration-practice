@@ -1,4 +1,4 @@
-# 📘 Day 14 - IBM MQ Pub/Sub Example — Topic-Based Messaging
+# 📘 Day 15 - IBM MQ Pub/Sub Example — Topic-Based Messaging
 This guide demonstrates topic-based Publish/Subscribe (Pub/Sub) in IBM MQ using a topic /SPORTS/TENNIS, 10 subscribers, and basic pub/sub commands.
 
 ### 🧠 What is Pub/Sub in MQ?
