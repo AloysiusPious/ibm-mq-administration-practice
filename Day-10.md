@@ -11,12 +11,13 @@ Set thresholds to get alerts when a queue gets too full or too empty
 Understand event queues and how MQ notifies administrators of queue-related conditions
 
 ### 📚 Concepts
-Term	Description
-CURDEPTH	Current number of messages in a queue
-MAXDEPTH	Maximum number of messages allowed in a queue
-QDEPTHHI, QDEPTHLO	High and low watermarks for queue depth
-QDEPTHMAXEV	Enables/disables queue depth events
-SYSTEM.ADMIN.QMGR.EVENT	Queue where MQ writes queue manager event messages
+|Term	|Description|
+|------|-----------|
+|CURDEPTH	|Current number of messages in a queue|
+|MAXDEPTH	|Maximum number of messages allowed in a queue|
+|QDEPTHHI, QDEPTHLO	|High and low watermarks for queue depth|
+|QDEPTHMAXEV	|Enables/disables queue depth events|
+|SYSTEM.ADMIN.QMGR.EVENT	|Queue where MQ writes queue manager event messages|
 
 ### 🛠️ Step-by-Step Practice
 ### 🔧 1. Define a Local Queue with Depth Limits
