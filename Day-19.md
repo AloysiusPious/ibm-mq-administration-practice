@@ -82,9 +82,9 @@ Trace files can be very large; enable only when troubleshooting.
 
 - To get detailed listener activity:
 
--- Enable tracing on the listener channel (same as channel trace).
+  - Enable tracing on the listener channel (same as channel trace).
 
--- Use external system/network monitoring for TCP port status.
+  - Use external system/network monitoring for TCP port status.
 
 ### 5️⃣ Useful MQ Log Commands Summary
 Command	Purpose
