@@ -92,6 +92,7 @@ SET CHLAUTH('APP.SVRCONN') TYPE(ADDRESSMAP) ADDRESS('192.168.1.100') MCAUSER('ap
 
 ## 🧪 Troubleshooting Tips
 |Issue	|Cause	|Fix|
+|-------|-------|---|
 |AMQ9777 Channel was blocked	|CHLAUTH rule blocking IP	|Add ADDRESSMAP or disable CHLAUTH (test only)|
 |2035 MQRC_NOT_AUTHORIZED	|Missing user authority	|Use setmqaut to allow access|
 |Connection Refused	|Listener not started or port issue	|Start listener and open firewall port|
