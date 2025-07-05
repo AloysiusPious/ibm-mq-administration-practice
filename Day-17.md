@@ -1,4 +1,4 @@
-# 🗓️ Day 14 - Topic: Message Expiry (Time-to-Live / TTL)
+# 🗓️ Day 17 - Topic: Message Expiry (Time-to-Live / TTL)
 ### 🎯 Objective
 Learn how to configure and observe message expiry in IBM MQ — a feature that defines how long a message can remain in a queue before it is discarded.
 
