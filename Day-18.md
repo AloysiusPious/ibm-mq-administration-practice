@@ -1,4 +1,4 @@
-# 📘 Day-15: IBM MQ — Backup & Restore of Entire Queue Manager Configuration
+# 📘 Day-18: IBM MQ — Backup & Restore of Entire Queue Manager Configuration
 
 This lesson focuses on how to **backup** and **restore** the full configuration of an IBM MQ Queue Manager, including objects like queues, channels, listeners, and authorization records.
 
