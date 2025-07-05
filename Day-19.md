@@ -87,43 +87,46 @@ Trace files can be very large; enable only when troubleshooting.
   - Use external system/network monitoring for TCP port status.
 
 ### 5️⃣ Useful MQ Log Commands Summary
-Command	Purpose
-tail -f /var/mqm/qmgrs/<QMGR>/errors/AMQERR01.LOG	Real-time monitoring of QMGR errors
-runmqsc QMGR + START TRACE(CHANNEL)	Enable channel trace for deep diagnostics
-endtrace	Stop MQ tracing
-strmqm QMGR	Start Queue Manager
-endmqm QMGR	Stop Queue Manager
-grep <keyword> AMQERR01.LOG	Search logs for specific error or event
+|Command	|Purpose|
+|---------|-------|
+|tail -f /var/mqm/qmgrs/<QMGR>/errors/AMQERR01.LOG	|Real-time monitoring of QMGR errors|
+|runmqsc QMGR + START TRACE(CHANNEL)	E|nable channel trace for deep diagnostics|
+|endtrace	|Stop MQ tracing|
+|strmqm QMGR	S|tart Queue Manager|
+|endmqm QMGR	|Stop Queue Manager|
+|grep <keyword> AMQERR01.LOG	|Search logs for specific error or event|
 
-6️⃣ Common Troubleshooting Scenarios Using Logs
-Scenario	Log to Check	Notes
-QMGR fails to start	AMQERR01.LOG (QMGR errors)	Look for startup failure reasons
-Channels stuck in retry or inactive	Channel trace logs + AMQERR01.LOG	Check connection and auth errors
-Listener not accepting connections	Listener errors in AMQERR01.LOG	Firewall, port conflicts, or misconfig
-Security/authorization failures	QMGR error logs + CHLAUTH trace if enabled	Check 2035 or 2085 MQRC errors
+### 6️⃣ Common Troubleshooting Scenarios Using Logs
+|Scenario	|Log to Check	|Notes|
+|---------|-------------|-----|
+|QMGR fails to start	|AMQERR01.LOG (QMGR errors)	|Look for startup failure reasons|
+|Channels stuck in retry or inactive	|Channel trace logs + AMQERR01.LOG	|Check connection and auth errors|
+|Listener not accepting connections	|Listener errors in AMQERR01.LOG	|Firewall, port conflicts, or misconfig|
+|Security/authorization failures	Q|MGR error logs + CHLAUTH trace if enabled	|Check 2035 or 2085 MQRC errors|
 
-7️⃣ Best Practices for MQ Logs
-Regularly rotate and archive logs to prevent disk full issues.
+### 7️⃣ Best Practices for MQ Logs
+- Regularly rotate and archive logs to prevent disk full issues.
 
-Enable channel tracing only temporarily to reduce overhead.
+- Enable channel tracing only temporarily to reduce overhead.
 
-Monitor logs proactively using automated scripts.
+- Monitor logs proactively using automated scripts.
 
-Correlate MQRC codes from logs with IBM documentation for faster resolution.
+- Correlate MQRC codes from logs with IBM documentation for faster resolution.
 
-8️⃣ References & Further Reading
-IBM MQ Error Logs Overview
+### 8️⃣ References & Further Reading
+[IBM MQ Error Logs Overview)[https://www.ibm.com/docs/en/ibm-mq/9.3?topic=errors-error-logs)
 
-IBM MQ Channel Tracing
+[IBM MQ Channel Tracing](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=channels-channel-tracing)
 
-IBM MQ Listener Configuration
+[IBM MQ Listener Configuration](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=listeners-overview)
 
-IBM MQ Troubleshooting Guide
+[IBM MQ Troubleshooting Guide](https://www.ibm.com/support/pages/ibm-mq-troubleshooting)
 
-✅ Summary Table
-Log Type	Location	Purpose	Notes
-QMGR Error Logs	/var/mqm/qmgrs/<QMGR>/errors/	QMGR lifecycle and error info	Use tail -f to monitor live
-Global MQ Errors	/var/mqm/errors/	System-wide MQ errors	Includes installation-wide issues
-Channel Trace Logs	/var/mqm/trace/	Deep diagnostics for channels	Binary files, decode required
-Listener Logs	In QMGR error logs	Listener start/stop, errors	No separate log file by default
+## ✅ Summary Table
+|Log Type	|Location	|Purpose	|Notes|
+|--------|----------|---------|-----|
+|QMGR Error Logs	|/var/mqm/qmgrs/<QMGR>/errors/	Q|MGR lifecycle and error info	|Use tail -f to monitor live|
+|Global MQ Errors	|/var/mqm/errors/	|System-wide MQ errors	|Includes installation-wide issues|
+|Channel Trace Logs	|var/mqm/trace/	|Deep diagnostics for channels	|Binary files, decode required|
+|Listener Logs	|In QMGR error logs	|Listener start/stop, errors	|No separate log file by default|
 
