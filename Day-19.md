@@ -114,7 +114,7 @@ Trace files can be very large; enable only when troubleshooting.
 - Correlate MQRC codes from logs with IBM documentation for faster resolution.
 
 ### 8️⃣ References & Further Reading
-[IBM MQ Error Logs Overview)[https://www.ibm.com/docs/en/ibm-mq/9.3?topic=errors-error-logs)
+[IBM MQ Error Logs Overview](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=errors-error-logs)
 
 [IBM MQ Channel Tracing](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=channels-channel-tracing)
 
