@@ -1,5 +1,5 @@
 
-# 📘 IBM MQ Cluster Setup — Full Guide - 📘 Day 12 - IBM MQ Practice
+# 📘 Day 12 - IBM MQ Cluster Setup — Full Guide
 
 ```bash
 This guide explains how to set up a basic MQ Cluster using:
