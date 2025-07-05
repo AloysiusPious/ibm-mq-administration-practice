@@ -106,7 +106,7 @@ setmqaut -m QMGR -t q -n Q1 -p appuser +put +get +browse +inq
 ### 🧠 Summary Table
 |Tool/API	|Action Type	|Removes Message	|Use Case|
 |---------|-------------|-----------------|--------|
-|amqsput	|Put message	|N/A	S|end test messages|
+|amqsput	|Put message	|N/A	|Send test messages|
 |amqsbcg	|Browse	|❌ No	|Debugging, auditing|
 |amqsget	|Destructive Get	|✅ Yes	|Application-like message consumption|
 |MQGET + BROWSE	|Programmatic	|❌ No	|Selective processing without deletion|
