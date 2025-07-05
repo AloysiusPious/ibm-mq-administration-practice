@@ -18,7 +18,7 @@ This lesson covers the difference between **persistent** and **non-persistent** 
 | Type             | Description                                                                 |
 |------------------|-----------------------------------------------------------------------------|
 | **Persistent**   | Message survives MQ or system crash; stored to disk                         |
-| **Non-Persistent** | Message is kept in memory; lost if QMGR crashes or restarts                |
+| **Non-Persistent** | Message is kept in memory; lost if QMGR crashes or restarts               |
 
 ---
 
@@ -51,57 +51,53 @@ In real applications, persistence is set via MQMD or MQPMO options.
 
 #### 4️⃣ Verify Persistence Behavior
 ### ✅ Test Case
-Define two queues:
+#### Define two queues:
 
 ```bash
 DEFINE QLOCAL(Q.PERSIST) DEFPSIST(YES)
 DEFINE QLOCAL(Q.NONPERSIST) DEFPSIST(NO)
 ```
-Put messages:
+#### Put messages:
 ```bash
 amqsput Q.PERSIST QMGR
 amqsput Q.NONPERSIST QMGR
 ```
-Before consuming, simulate QMGR crash:
+#### Before consuming, simulate QMGR crash:
 
 ```bash
 endmqm -i QMGR   # Immediate stop
 strmqm QMGR
+```
 Get messages:
 
-bash
-Copy
-Edit
+```bash
 amqsget Q.PERSIST QMGR   # ✅ Messages still available
 amqsget Q.NONPERSIST QMGR # ❌ Messages are lost
-5️⃣ MQMD Field: Persistence
-Field: MQMD.Persistence
+```
+#### 5️⃣ MQMD Field: Persistence
+| Constant                     | Value | Description                         |
+| ---------------------------- | ----- | ----------------------------------- |
+| `MQPER_PERSISTENT`           | 2     | Forces message to be persistent     |
+| `MQPER_NOT_PERSISTENT`       | 1     | Forces message to be non-persistent |
+| `MQPER_PERSISTENCE_AS_Q_DEF` | 0     | Uses queue default                  |
 
-Values:
+#### 6️⃣ Considerations
+| Factor                 | Persistent | Non-Persistent    |
+| ---------------------- | ---------- | ----------------- |
+| Disk I/O               | Higher     | Lower (In-memory) |
+| Delivery Guarantee     | Guaranteed | Best-effort       |
+| Performance            | Slower     | Faster            |
+| Used for Critical Data | ✅ Yes      | ❌ No              |
+| Storage overhead       | ✅ More     | ✅ Less            |
 
-MQPER_PERSISTENT = 2
+#### 7️⃣ Monitoring & Audit
+- Use dmpmqmsg or amqsbcg to view message headers and check persistence
 
-MQPER_NOT_PERSISTENT = 1
+- Use runmqsc to display queue and message stats
 
-MQPER_PERSISTENCE_AS_Q_DEF = 0 (Use queue default)
-
-6️⃣ Considerations
-Factor	Persistent	Non-Persistent
-Disk I/O	Higher	Lower (In-memory)
-Delivery Guarantee	Guaranteed	Best-effort
-Performance	Slower	Faster
-Used for Critical Data	✅ Yes	❌ No
-Storage overhead	✅ More	✅ Less
-
-7️⃣ Monitoring & Audit
-Use dmpmqmsg or amqsbcg to view message headers and check persistence
-
-Use runmqsc to display queue and message stats
-
-bash
-Copy
-Edit
+``` bash
 DISPLAY QLOCAL(Q.PERSIST) CURDEPTH DEFSOPT DEFPSIST
+```
 ## ✅ Summary
 |Use Case	|Recommended |Persistence|
 |---------|------------|-----------|
@@ -111,7 +107,7 @@ DISPLAY QLOCAL(Q.PERSIST) CURDEPTH DEFSOPT DEFPSIST
 |Monitoring Alerts	|Non-Persistent|
 |Order Placement Systems	|Persistent|
 
-📚 References
-IBM MQ: Message Persistence
+## 📚 References
+[IBM MQ: Message Persistence](https://www.ibm.com/docs/en/ibm-mq/latest?topic=messages-persistence)
 
-MQMD Structure Documentation
+[MQMD Structure Documentation](https://www.ibm.com/docs/en/ibm-mq/latest?topic=structures-mqmd)
