@@ -79,6 +79,7 @@ The rpm -ivh * command installs all necessary MQ components.
 You can change the install directory from /opt/mqm to a custom location if required.
 
 📚 References
+
 [IBM MQ Documentation](https://www.ibm.com/docs/en/ibm-mq/9.2.x?topic=mq-introduction).
 
 [MQ Trial Download](https://www.ibm.com/docs/en/ibm-mq/9.4.x?topic=information-mq-downloads)
