@@ -1,6 +1,6 @@
 # 📘 IBM MQ Administration Practice Series (19 Days)
 
-Welcome to the **IBM MQ 14-Day Practice Series** — a curated, progressive guide to mastering MQ administration on IBM MQ 9.4.0.10.
+Welcome to the **IBM MQ 19-Day Practice Series** — a curated, progressive guide to mastering MQ administration on IBM MQ 9.4.0.10.
 
 ## 🔥 What You'll Learn
 - Queue manager setup, queues, channels, authentication
