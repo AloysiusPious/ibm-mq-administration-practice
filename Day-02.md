@@ -13,13 +13,23 @@ Environment variables configured using setmqenv​
 
 ### ✅ Steps
 ## 1. Create a Queue Manager
-The -q flag only tells MQ to create a quiescing-capable queue manager (which is the default behavior anyway).
+The crtmqm command creates a queue manager. By default, it uses system paths (e.g., /var/mqm/log and /var/mqm/qmgrs) unless customized. Specify paths for logs and data as needed.
 ```bash
-crtmqm -q QM1
+# Create a default queue manager with system paths
+crtmqm QM1
+
+# Create with custom log and data directories
 crtmqm -ld /mqdata/logs -md /mqdata/qmgrs QM1
 ```
-Log files go to: /mqdata/qm1/log
+Log files go to: /mqdata/logs/QM1 (when using -ld /mqdata/logs).
+
 You can also control the data directory (where queues/config are stored) using -md:
+Data directory (queues/config) goes to: /mqdata/qmgrs/QM1 (when using -md /mqdata/qmgrs).
+
+### Verification Steps
+
+Test the Command: Run crtmqm -ld /mqdata/logs -md /mqdata/qmgrs QM1 in a test environment and verify directories with ls -l /mqdata/logs/ and ls -l /mqdata/qmgrs/. Expect /mqdata/logs/QM1 and /mqdata/qmgrs/QM1.
+Check qm.ini: After creation, open /mqdata/qmgrs/QM1/qm.ini to confirm LogPath=/mqdata/logs/QM1.
 
 After Creation: Can You Move It?
 After creating the queue manager:
