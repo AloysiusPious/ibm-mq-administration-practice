@@ -59,7 +59,7 @@ DISPLAY QLOCAL('TEST.QUEUE')
 ## 5. Send a Test Message
 if /opt/mqm/samp/bin/amqsput path is not set in env variable then export it
 ```bash
-echo "Hello MQ" | amqsput TEST.QUEUE QM1
+amqsput TEST.QUEUE QM1
 ```
 After executing, type your message and press Enter. To end input, press Ctrl+D.​
 
