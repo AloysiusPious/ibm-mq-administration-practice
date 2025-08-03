@@ -61,21 +61,17 @@ A Server-Connection channel defines how remote client applications or other MQ E
 
 Using MQ Explorer:
 
-Expand the desired Queue Manager in the navigation pane.
-
-Right-click on the Channels folder.
-
-Select New → Server-Connection Channel...
-
-Provide a name (e.g., MY.SVRCONN), set Transport type to TCP, and specify a Port (default is 1414).
-
-Click OK.
+- Expand the desired Queue Manager in the navigation pane.
+- Right-click on the Channels folder.
+- Select New → Server-Connection Channel...
+- Provide a name (e.g., MY.SVRCONN), set Transport type to TCP, and specify a Connection name (e.g., `localhost(1414)`).
+- Click OK.
 
 Using Command Line:
 
 ```bash
 
-DEFINE CHANNEL(MY.SVRCONN) CHLTYPE(SVRCONN) TRPTYPE(TCP) PORT(1414)
+DEFINE CHANNEL(MY.SVRCONN) CHLTYPE(SVRCONN) TRPTYPE(TCP) CONNAME('localhost(1414)') PORT(1414)
 ```
 📡 Creating and Starting Listener
 A Listener is a process that listens for incoming connection requests on a specific network port and associates them with the Queue Manager.
@@ -95,8 +91,7 @@ Click OK to create and start the Listener.
 Using Command Line:
 
 ```bash
-
-DEFINE LISTENER(LISTENER1) TRPTYPE(TCP) PORT(1414)
+DEFINE LISTENER(LISTENER1) TRPTYPE(TCP) PORT(1414) CONTROL(QMGR)
 START LISTENER(LISTENER1)
 ```
 ## 4. Local vs. Remote Connections
