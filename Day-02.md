@@ -29,6 +29,7 @@ Data directory (queues/config) goes to: /mqdata/qmgrs/QM1 (when using -md /mqdat
 ### Verification Steps
 
 Test the Command: Run crtmqm -ld /mqdata/logs -md /mqdata/qmgrs QM1 in a test environment and verify directories with ls -l /mqdata/logs/ and ls -l /mqdata/qmgrs/. Expect /mqdata/logs/QM1 and /mqdata/qmgrs/QM1.
+
 Check qm.ini: After creation, open /mqdata/qmgrs/QM1/qm.ini to confirm LogPath=/mqdata/logs/QM1.
 
 After Creation: Can You Move It?
