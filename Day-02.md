@@ -15,7 +15,7 @@ Environment variables configured using setmqenv​
 ## 1. Create a Queue Manager
 The crtmqm command creates a queue manager. By default, it uses system paths (e.g., /var/mqm/log and /var/mqm/qmgrs) unless customized. Specify paths for logs and data as needed.
 ```bash
-# Create a default queue manager with system paths
+# Create a queue manager with system paths
 crtmqm QM1
 
 # Create with custom log and data directories
@@ -60,8 +60,8 @@ DISPLAY QLOCAL('TEST.QUEUE')
 if /opt/mqm/samp/bin/amqsput path is not set in env variable then export it
 ```bash
 amqsput TEST.QUEUE QM1
+#Type your message and press Enter on a blank line to send it:"
 ```
-After executing, type your message and press Enter. To end input, press Ctrl+D.​
 
 ## 6. Retrieve the Message
 ```bash
